@@ -25,4 +25,4 @@ jobs:
     - name: Build with Maven
       run: |
         cd adargahometest
-        mvn clean install --file pom.xml
+        mvn clean compile --file pom.xml
