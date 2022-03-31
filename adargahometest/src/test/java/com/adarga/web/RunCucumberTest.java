@@ -51,7 +51,6 @@ public class RunCucumberTest {
         final byte[] screenshot = ((TakesScreenshot) driverProvider.getDriver())
                 .getScreenshotAs(OutputType.BYTES);
         scenario.attach(screenshot, "image/png",  scenario.getName()); //stick it in the report
-        //driverProvider.getDriver().close();
     }
 
 

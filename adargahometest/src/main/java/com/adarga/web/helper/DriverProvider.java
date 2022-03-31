@@ -1,6 +1,7 @@
 package com.adarga.web.helper;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,12 +35,13 @@ public class DriverProvider {
             case CHROME:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chOption = new ChromeOptions();
+
                 chOption.addArguments("start-maximized");
                 chOption.addArguments("--disable-blink-features");
                 chOption.addArguments("--disable-blink-features=AutomationControlled");
 
-                chOption.addArguments("window-size=1280,800");
-                chOption.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36");
+                chOption.addArguments("window-size=1280,1100");
+                chOption.addArguments("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36");
 
                 //chOption.addArguments("proxy-server=106.122.8.54:3128");
                 chOption.setExperimentalOption("useAutomationExtension", Boolean.FALSE);
@@ -71,7 +73,6 @@ public class DriverProvider {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5L,1L));
         ((JavascriptExecutor) driver).executeScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
-
         return driver;
     }
 

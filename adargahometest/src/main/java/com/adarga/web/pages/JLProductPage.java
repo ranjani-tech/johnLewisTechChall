@@ -27,10 +27,11 @@ public class JLProductPage extends BasePage{
     String imgXpath = null;
     WebElement productImageElement;
 
-   // @FindBy(xpath = "//button[@id='button--add-to-basket' and @type='submit']")
+    @FindBy(xpath = "//button[@id='button--add-to-basket' and @type='submit']")
     WebElement addToBasketElement;
 
-    @FindBy(xpath = "//h2[@class='add-to-basket-add-on-heading' and text()='Added to your basket:']")
+    //@FindBy(xpath = "//h2[@class='add-to-basket-add-on-heading' and text()='Added to your basket:']")
+    @FindBy(xpath = "//h2[text()='Added to your basket:']")
     WebElement addedToTheBasketElement;
 
     @FindBy(xpath = "//a[text()='Go to your basket']")
