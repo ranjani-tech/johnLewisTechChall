@@ -31,6 +31,10 @@ The different layers and their scope are as follows:
 This layer contains feature files where a QA engineer writes simple scenarios in BDD format using Gherkin language.
 Feature files increases the speed of writing new automated scenarios by reusing pre-existing scenario steps also allows non-engineering
 team members to review test cases without getting into too much technical details.
+ - Feature file can be custom changed to different product by updating
+ ```
+ And user selects the product as "$product" from "$page" 
+ ```
 
 **Layer II: Step definitions (Path: [src/test/java/com/adarga/web/StepDefinitions.java])**
 
