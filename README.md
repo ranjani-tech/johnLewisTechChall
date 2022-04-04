@@ -47,7 +47,7 @@ classes to cause test execution.
       2. checkoutPageStepDefinitions
       3. validationPageStepDefinitions
 ```
-**Layer III: Page layer(Path: [src/main/java/com/adarge/web/pages])**
+**Layer III: Page layer(Path: [src/main/java/com/adarga/web/pages])**
 
 This layer converts the action cues received from step definition layer to absolute commands for the base layer.
 This layer has two main responsibilities,
@@ -59,7 +59,7 @@ This layer has two main responsibilities,
       2. CheckoutPage
       3. ValidationPage
 ```
-**Layer IV: Base Action layer(Path: [src/main/java/com/adarge/web/base])**
+**Layer IV: Base Action layer(Path: [src/main/java/com/adarga/web/base])**
 
 This layer is free from business/page logic and deals with the technical mechanisms to execute framework specific commands
 as required by the page layer. Usually this is the only place where platform specific actions are performed.
